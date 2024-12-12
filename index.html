@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEEL</title>
+    <!-- CSS-->
+    <link rel="stylesheet" href="css_files/carrousel.css">
+    <link rel="stylesheet" href="css_files/fancybox.css">
+    <link rel="stylesheet" href="css_files/animate.css">
+    <link rel="stylesheet" href="css_files/styles.css">
+    <link rel="stylesheet" href="css_files/movil.css">
+    <link rel="stylesheet" href="css_files/tablet.css">
+    <link rel="stylesheet" href="css_files/ajustes.css">
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js_files/fancybox.js"></script>
+    <script src="js_files/responsiveslides.js"></script>
+    <script src="js_files/wow.min.js"></script>
+    <script src="https://kit.fontawesome.com/429099fef3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- BOTON PARA SUBIR -->
+    <a href="#" id="btn_subir" class="btn_subir"><i class="fa-solid fa-circle-arrow-up"></i></a>
+
+    <!-- MODAL CON FORM -->
+    <dialog id="modal" class="modal">
+        <!-- Contendor general -->
+        <section class="cont_modal">
+            <!-- Btn cerrar -->
+            <button id="btn_cerrar_modal" type="reset"><i class="fa-solid fa-square-xmark"></i></button>
+            <!-- Titulo -->
+            <h2 class="modal_titulo">Contact Us</h2>
+            <!-- Div para el contenido -->
+            <div class="modal_row">
+                <!-- Info -->
+                <div class="info_modal">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente dolorem magni eveniet corrupti eos perferendis doloribus reprehenderit.</p>
+                    <h2 class="naranja">8901 Marmora Road, Glasgow, D04 89GR.</h2>
+                </div>
+                <!-- Formulario -->
+                <form class="form_modal" name="form">
+                    <div class="form_modal_inputs">
+                        <input type="text" id="form_name" placeholder="Name*">
+                        <input type="text" id="form_mail" placeholder="E-mail*">
+                        <input type="text" id="form_telefono" placeholder="Telephone">
+                    </div>
+                    <textarea name="" id="form_text" placeholder="Comment*"></textarea>
+                    <a href="#" id="btn_form">Submit</a>
+                </form>
+            </div>
+        </section>
+    </dialog>
+
+    <!-- HEADER -->
+    <header class="head" id="home">
+        <!-- Franja negra -->
+        <section class="franja_negra">
+            <!-- Contenedor ancho 1200px -->
+            <div class="head_ancho ancho">
+                <!-- Contenedor de info de contacto -->
+                <div class="head_cont_info" id="contact_menu">
+                    <!-- Email -->
+                    <div class="head_cont_email">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>Email: <span class="naranja">info@example.com</span></p>
+                    </div>
+                    <!-- Contact -->
+                    <div class="head_cont_contact">
+                        <p>Need help? Contact Us!</p>
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <p><span class="naranja">1-800-1234-5671</span></p>
+                    </div>
+                </div>
+                <!-- Div con logo y boton de menu de opciones -->
+                <div class="cont_btn_menu">
+                    <a href="#" class="btn_menu" id="options_menu_btn"><i id="boton_menu" class="fa-solid fa-bars"></i></a>
+                    <figure>
+                        <img src="imagenes/logo_inverse.png" alt="">
+                    </figure>
+                </div>
+                <!-- Boton de menu de contacto -->
+                <a href="#" class="btn_contact" id="contact_menu_btn"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+            </div>
+        </section>
+        <!-- Nav blanco con logo -->
+        <nav class="head_cont_nav ancho">
+            <figure class="fig_logo">
+                <img src="imagenes/logo_default.png" alt="">
+            </figure>
+            <!-- Menu de opciones -->
+            <ul class="cont_menu" id="options_menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#" id="btn_abrir_modal">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Slider -->
+    <section class="cont_slider" id="slider">
+        <!-- Fotos -->
+        <ul class="rslides">
+            <li><img src="imagenes/slide1.jpg" alt=""></li>
+            <li><img src="imagenes/slide2.jpg" alt=""></li>
+            <li><img src="imagenes/slide3.jpg" alt=""></li>
+        </ul>
+        <!-- Div para limitar el ancho -->
+        <div class="cont_slider_info ancho">
+            <!-- Div con texto -->
+            <div class="cont_slider_text">
+                <h1 class="service wow animate__animated animate__fadeInUp">A Large Assortment of Steel Products</h1>
+                <p class="service wow animate__animated animate__fadeInUp">Our company provides a wide variety of steel products for customers all over the USA and beyond.</p>
+                <a href="#" class="service wow animate__animated animate__fadeInUp">Read more</a>
+            </div>
+        </div>
+        <!-- Filtro con polygon -->
+        <div class="filtro"></div>
+    </section>
+
+    <!-- Products -->
+    <section class="titulo_prodcuts ancho" id="products">
+        <h2>OUR PRODCUTS</h2>
+    </section>
+    <section class="cont_products ancho">
+        <!-- Contenedor de producto -->
+        <article class="cont_prod service wow animate__animated animate__fadeInUp">
+            <!-- Franja negra con titulo y animación -->
+            <div class="cont_prod_titulo acordeon_titulo">
+                <div class="prod_titulo_dark">
+                    <h2>Steel Angles</h2>
+                </div>
+                <div class="prod_titulo_light" id="anim_titulo"></div>
+            </div>
+            <figure class="prod_fig1 acordeon_info">
+                <img src="imagenes/product1.jpg" alt="">
+            </figure>
+        </article>
+        <!-- Contenedor de producto -->
+        <article class="cont_prod service wow animate__animated animate__fadeInUp">
+            <!-- Franja negra con titulo y animación -->
+            <div class="cont_prod_titulo acordeon_titulo">
+                <div class="prod_titulo_dark">
+                    <h2>Steel Beans</h2>
+                </div>
+                <div class="prod_titulo_light" id="anim_titulo"></div>
+            </div>
+            <figure class="prod_fig2 acordeon_info">
+                <img src="imagenes/product2.jpg" alt="">
+            </figure>
+        </article>
+        <!-- Contenedor de producto -->
+        <article class="cont_prod service wow animate__animated animate__fadeInUp">
+            <!-- Franja negra con titulo y animación -->
+            <div class="cont_prod_titulo acordeon_titulo">
+                <div class="prod_titulo_dark">
+                    <h2>Steel Lally Columns</h2>
+                </div>
+                <div class="prod_titulo_light" id="anim_titulo"></div>
+            </div>
+            <figure class="prod_fig3 acordeon_info">
+                <img src="imagenes/product3.jpg" alt="">
+            </figure>
+        </article>
+        <!-- Contenedor de producto -->
+        <article class="cont_prod service wow animate__animated animate__fadeInUp">
+            <!-- Franja negra con titulo y animación -->
+            <div class="cont_prod_titulo acordeon_titulo">
+                <div class="prod_titulo_dark">
+                    <h2>Metal Plates ans Sheets</h2>
+                </div>
+                <div class="prod_titulo_light" id="anim_titulo"></div>
+            </div>
+            <figure class="prod_fig4 acordeon_info">
+                <img src="imagenes/product4.jpg" alt="">
+            </figure>
+        </article>
+        <!-- Contenedor de producto -->
+        <article class="cont_prod service wow animate__animated animate__fadeInUp">
+            <!-- Franja negra con titulo y animación -->
+            <div class="cont_prod_titulo acordeon_titulo">
+                <div class="prod_titulo_dark">
+                    <h2>Steel Tubing and Pipes</h2>
+                </div>
+                <div class="prod_titulo_light" id="anim_titulo"></div>
+            </div>
+            <figure class="prod_fig5 acordeon_info">
+                <img src="imagenes/product5.jpg" alt="">
+            </figure>
+        </article>
+        <!-- Contenedor de producto -->
+        <article class="cont_prod service wow animate__animated animate__fadeInUp">
+            <!-- Franja negra con titulo y animación -->
+            <div class="cont_prod_titulo acordeon_titulo">
+                <div class="prod_titulo_dark">
+                    <h2>Steel Squares</h2>
+                </div>
+                <div class="prod_titulo_light" id="anim_titulo"></div>
+            </div>
+            <figure class="prod_fig6 acordeon_info">
+                <img src="imagenes/product6.jpg" alt="">
+            </figure>
+        </article>
+    </section>
+
+    <!-- CARROUSEL (ABOUT) -->
+    <section class="cont_carousel_padre" id="about">
+        <section class="cont_carousel ancho" id="carousel">
+            <!--Titulo -->
+            <section class="about_titulo">
+                <h2 id="about_titulo">About us</h2>
+                <div></div>
+            </section>
+            <!-- Row -->
+            <section class="cont_about">
+                <!-- Info -->
+                <article class="about_info">
+                    <figure class="fig_about">
+                        <img src="imagenes/about1.jpg" alt="">
+                    </figure>
+                    <h2 class="naranja">Lorem ipsum dolor sit amet</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic est libero quas reprehenderit cumque delectus et ab, quo ipsum, alias, officia quae tenetur? Ab accusantium amet iure, magni rerum ipsa!</p>
+                </article>
+                <!-- Corousel -->
+                <article class="cont_slides" id="slide-container">
+                    <!-- Team 1 -->
+                    <article class="slide" data-slideIndex="0">
+                        <figure class="fig_slide">
+                            <img src="imagenes/team1.jpg" alt="">
+                        </figure>
+                        <h2 class="naranja">Mark Johnson</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, voluptates alias? Iure magnam, officia aspernatur</p>
+                    </article>
+                    <!-- Team 2 -->
+                    <article class="slide" data-slideIndex="1">
+                        <figure class="fig_slide">
+                            <img src="imagenes/team2.jpg" alt="">
+                        </figure>
+                        <h2 class="naranja">Patrick Pool</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, voluptates alias? Iure magnam, officia aspernatur</p>
+                    </article>
+                    <!-- Team 3 -->
+                    <article class="slide" data-slideIndex="1">
+                        <figure class="fig_slide">
+                            <img src="imagenes/team3.jpg" alt="">
+                        </figure>
+                        <h2 class="naranja">Sam Kromstain</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, voluptates alias? Iure magnam, officia aspernatur</p>
+                    </article>
+                    <!-- Team 4 -->
+                    <article class="slide" data-slideIndex="1">
+                        <figure class="fig_slide">
+                            <img src="imagenes/team4.jpg" alt="">
+                        </figure>
+                        <h2 class="naranja">Alan Smith</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, voluptates alias? Iure magnam, officia aspernatur</p>
+                    </article>
+                </article>
+            </section>
+            <!-- Botones -->
+            <div class="cont_flechas">
+                <a href="#about_titulo" id="back-button" class="arrow back"><i class="fa-solid fa-chevron-left"></i></a>
+                <a href="#about_titulo" id="forward-button" class="arrow forward"><i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+        </section>
+    </section>
+
+    <!-- PARALLAX -->
+    <section class="parrallax">
+        <article class="cont_parrallax ancho">
+            <div class="cont_parallax_info">
+                <h2 class="service wow animate__animated animate__fadeInUp">Committed to value-added service and solid reputation</h2>
+                <a href="#" class="service wow animate__animated animate__fadeInUp">Read more</a>
+            </div>
+        </article>
+        <div class="filtro_parallax"></div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="cont_services_padre" id="services">
+        <!-- Div para limitar el ancho -->
+        <div class="titulo_services ancho">
+            <h2>Our Services</h2>
+        </div>
+        <section class="cont_services ancho" id="galeria">
+            <!-- Servicio -->
+            <article class="cont_service">
+                <!-- Foto con FancyBox -->
+                <a href="imagenes/service1.jpg" data-fancybox="gallery" data-caption="Steel Sourcing">
+                    <figure class="fig_service">
+                        <img src="imagenes/service1.jpg" alt="">
+                    </figure>
+                </a>
+                <!-- Info de servicio -->
+                <h2><span class="naranja">Steel Sourcing</span></h2>
+                    <p>We regularly audit and monitor all of our steel supply sources for quality and performance to ensure you receive the best materials.</p>
+                    <div class="cont_service_read">
+                        <a href="#">Read more</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+            </article>
+            <!-- Servicio -->
+            <article class="cont_service">
+                <!-- Foto con FancyBox -->
+                <a href="imagenes/service2.jpg" data-fancybox="gallery" data-caption="Structural design">
+                    <figure class="fig_service">
+                        <img src="imagenes/service2.jpg" alt="">
+                    </figure>
+                </a>
+                <!-- Info de servicio -->
+                <h2><span class="naranja">Structural Design</span></h2>
+                    <p>Steel provides 3D modelling and steelwork detailing services integral with structural engineering design capability.</p>
+                    <div class="cont_service_read">
+                        <a href="#">Read more</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+            </article>
+            <!-- Servicio -->
+            <article class="cont_service">
+                <!-- Foto con FancyBox -->
+                <a href="imagenes/service3.jpg" data-fancybox="gallery" data-caption="Material Processing">
+                    <figure class="fig_service">
+                        <img src="imagenes/service3.jpg" alt="">
+                    </figure>
+                </a>
+                <!-- Info de servicio -->
+                <h2><span class="naranja">Material Processing</span></h2>
+                    <p>We have the capacity to process raw material into finished goods in our workshop that has a range of modern technology machinery.</p>
+                    <div class="cont_service_read">
+                        <a href="#">Read more</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+            </article>
+            <!-- Servicio -->
+            <article class="cont_service">
+                <!-- Foto con FancyBox -->
+                <a href="imagenes/service4.jpg" data-fancybox="gallery" data-caption="Steel Welding">
+                    <figure class="fig_service">
+                        <img src="imagenes/service4.jpg" alt="">
+                    </figure>
+                </a>
+                <!-- Info de servicio -->
+                <h2><span class="naranja">Steel Welding</span></h2>
+                    <p>We have the capacity to weld mild steel, stainless steel and aluminium as well as advise the most effective method of joining metals.</p>
+                    <div class="cont_service_read">
+                        <a href="#">Read more</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+            </article>
+        </section>
+    </section>
+
+    <!-- VIDEO -->
+    <article class="cont_video_padre ancho">
+        <h2>Watch Us</h2>
+        <div class="cont_video">
+            <iframe class="video" src="https://www.youtube.com/embed/_HfEyt9VMzA?si=wQEmnX0p6apHcLpq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </article>
+
+    <!-- FOOTEER -->
+    <footer>
+        <p>©  2024 Steel. Privacy Policy</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="js_files/carrousel.js"></script>
+    <script>
+        //FANCYBOX
+        Fancybox.bind('[data-fancybox="gallery"]', {
+        });
+
+        // ANIMIACIONES WOW
+        new WOW().init();
+
+        // RESPONSIVE SLIDES
+        $(function() {
+        $(".rslides").responsiveSlides({
+            nav:true,
+            prevText: "〈 ",
+            nextText: " 〉",
+        });
+        });
+
+        // ACORDEON
+        $(".acordeon_titulo").click(function() {
+            var t = $(this);
+            var tp = t.next();
+            // Funcion agregada para cambiar display block por flex
+            tp.slideToggle(200, function() {
+                if ($(this).css('display') == 'block') $(this).css('display', 'flex');
+            });
+        });
+
+        //MODAL
+        (function () {
+            //Obtener botones de apertura, cierre y modal
+            var btn_abrir_modal = document.getElementById("btn_abrir_modal");
+            var btn_cerrar_modal = document.getElementById("btn_cerrar_modal");
+            var btn_form = document.getElementById("btn_form");
+            var modal = document.getElementById("modal");
+
+            // Abrir modal con el evento click del boton
+            btn_abrir_modal.addEventListener("click", function () {
+                modal.showModal();
+            });
+
+            // Cerrar modal con el evento click del boton
+            btn_cerrar_modal.addEventListener("click", function () {
+                modal.close();
+            });
+
+            // Cerrar con click fuera del modal
+            window.addEventListener("click", function () {
+                if(event.target === modal) {
+                    modal.close();
+                }
+            })
+
+            // Cerrar con ESC
+            document.addEventListener('keydown', function (event) {
+                if(event.key === 'Escape') {
+                    modal.close();
+                }
+            });
+            // Llamada a funcion de validacion
+            btn_form.addEventListener("click", function () {
+                valida_enviar();
+            });
+        })();
+
+        //FUNCION PARA VALIDAR CAMPOS OBLIGATORIOS
+        function valida_enviar() {
+            if(document.form.form_name.value.length == 0) {
+                alert("Campo obligatorio vacio (Nombre)")
+                document.formulario.nombre.focus()
+                return 0;
+            }
+
+            if(document.form.form_mail.value.length == 0) {
+                alert("Campo obligatorio vacio (Primer apellido)")
+                document.formulario.nombre.focus()
+                return 0;
+            }
+
+            if(document.form.form_text.value.length == 0) {
+                alert("Campo obligatorio vacio (Correo electrónico)")
+                document.formulario.nombre.focus()
+                return 0;
+            }
+            alert("Formulario enviado");
+        }
+
+        // MENU DE OPCIONES PARA HEADER
+        $("#options_menu_btn").click(function() {
+            abrir_menu_opciones()
+        });
+
+        // CERRAR MENU DE OPCIONES CON CLICK FUERA
+        $(document).click(function(event) {
+            if (!$(event.target).closest("#options_menu, #options_menu_btn", "#btn_subir").length && $("#options_menu").is(":visible") && window.innerWidth <=768) {
+                abrir_menu_opciones();
+            }
+        })
+
+        // MENU DE CONTACTO PARA HEADER
+        $("#contact_menu_btn").click(function() {
+            abrir_menu_contacto();
+        });
+
+        // CERRAR MENU DE CONTACTO CON CLICK FUERA
+        $(document).click(function(event) {
+            if (!$(event.target).closest("#contact_menu, #contact_menu_btn", "#btn_subir").length && $("#contact_menu").is(":visible") && window.innerWidth <=768) {
+                abrir_menu_contacto();
+            }
+        })
+
+        function abrir_menu_opciones() {
+            $("#options_menu").slideToggle();
+            $("#options_menu_btn").toggleClass("rotar");
+        }
+
+        function abrir_menu_contacto() {
+            $("#contact_menu").slideToggle();
+            $("#contact_menu_btn").toggleClass("rotar");
+        }
+    </script>
+</body>
+</html>

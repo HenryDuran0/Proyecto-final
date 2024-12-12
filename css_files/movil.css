@@ -1,0 +1,42 @@
+/* Colores */
+:root {
+    --negro: #000;
+    --blanco: #fff;
+    --gris: #858585;
+    --naranja: #f47e00;
+}
+
+@media screen and (max-width:480px){
+    /* SLIDER */
+
+    .cont_slider_text h1 {
+        font-size: 2em;
+    }
+
+    .prev {
+        display: none;
+    }
+
+    .next {
+        display: none;
+    }
+
+    /* PRODUCTS */
+
+    .cont_products {
+        grid-template-areas: "a" "b" "c" "d" "e" "f";
+    }
+
+    /* PARALLAX */
+
+    /* Titulo */
+    .cont_parallax_info h2 {
+        font-size: 2em;
+    }
+
+    /* Boton */
+    .cont_parallax_info a {
+        width: 70%;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,883 @@
+/* GENERALES */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.ancho {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Colores */
+:root {
+    --negro: #000;
+    --blanco: #fff;
+    --gris: #858585;
+    --gris_oscuro: #333333;
+    --naranja: #f47e00;
+}
+
+/* Clases para span */
+.naranja {
+    color: var(--naranja);
+}
+
+.rojo {
+    color: red;
+}
+
+/* BOTON SUBIR */
+.btn_subir {
+    position: fixed;
+    z-index: 999;
+    bottom: 2%;
+    right: 1%;
+}
+
+.btn_subir i {
+    color: var(--naranja);
+    transition: all .3s ease;
+    font-size: 3em;
+}
+
+.btn_subir i:hover {
+    color: var(--gris_oscuro);
+}
+
+/* MODAL */
+
+.modal {
+    margin: auto;
+    border-radius: 5px;
+    max-width: 800px;
+    height: 500px;
+    border: 0;
+}
+
+/* Btn cerrar */
+#btn_cerrar_modal {
+    color: var(--naranja);
+    position: absolute;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    border: 0;
+    top: 1%;
+    right: 1%;
+}
+
+#btn_cerrar_modal:hover {
+    color: var(--gris_oscuro);
+}
+
+#btn_cerrar_modal i {
+    font-size: 3em;
+}
+
+/* Contenedor general */
+.cont_modal {
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    padding: 20px;
+}
+
+/* Titulo */
+.modal_titulo {
+    color: var(--gris_oscuro);
+    font-size: 2em;
+    margin-block: 40px;
+    width: 100%;
+}
+
+/* Contenido del modal (debajo del titulo) */
+.modal_row {
+    /* border: 2px red solid; */
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+/* Info */
+.info_modal {
+    /* border: 2px blue solid; */
+    color: var(--gris);
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    gap: 30px;
+    width: 35%;
+}
+
+/* Form */
+.form_modal {
+    /* border: 2px green solid; */
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+/* Inputs del form */
+.form_modal_inputs {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.form_modal_inputs input {
+    border: 0;
+    font-size: 16px;
+    padding: 10px;
+    width: 32%;
+}
+
+/* Text area del form */
+.form_modal textarea {
+    margin-top: 30px;
+    height: 150px;
+    border: 0;
+    font-size: 16px;
+    padding: 10px;
+}
+
+/* Boton del form */
+.form_modal a {
+    clip-path: polygon(0% 0%, 75% 0%, 90% 50%, 75% 100%, 0% 100%);
+    background-color: var(--gris_oscuro);
+    color: var(--blanco);
+    text-decoration: none;
+    margin-top: 30px;
+    text-align: left;
+    padding: 15px ;
+    width: 35%;
+    transition: all .3s ease;
+}
+
+.form_modal a:hover {
+    background-color: var(--naranja);
+}
+
+/* HEADER */
+
+.head {
+    /* border: 2px blue solid; */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Botones de menu ocultos */
+.cont_btn_menu {
+    display: none;
+}
+
+.btn_menu {
+    transition: all .3s ease-out;
+}
+
+.btn_contact {
+    display: none;
+    transition: all .3s ease-out;
+}
+
+/* Franja negra con textura */
+.franja_negra {
+    background-image: url(../imagenes/dark_pattern.png);
+}
+
+.head_ancho {
+    /* border: 2px blue solid; */
+    display: flex;
+    height: 60px;
+}
+
+.head_cont_info {
+    /* border: 2px red solid; */
+    color: var(--blanco);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* iconos */
+.head_cont_info i {
+    font-size: 2em;
+    color: var(--gris);
+}
+
+/* Email info */
+.head_cont_email {
+    /* border: 2px red solid; */
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 5px;
+}
+
+.head_cont_email p {
+    cursor: pointer;
+}
+
+.head_cont_email a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+/* Contact info */
+.head_cont_contact {
+    /* border: 2px red solid; */
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    gap: 15px;
+}
+
+.head_cont_contact p {
+    cursor: pointer;
+}
+
+.head_cont_contact a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+/* Nav blanco con logo */
+.head_cont_nav {
+    /* border: 2px red solid; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+
+/* Logo */
+.fig_logo {
+    /* border: 2px blue solid; */
+    display: flex;
+    height: 60px;
+}
+
+.fig_logo img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Menu */
+.cont_menu {
+    /* border: 2px red solid; */
+    display: flex;
+    list-style: none;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.cont_menu li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.cont_menu li a {
+    color: var(--negro);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all .1s linear;
+    font-size: 1.5em;
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+}
+
+.cont_menu li a:hover {
+    background-color: var(--naranja);
+    color: var(--blanco);
+    border-bottom: 5px var(--negro) solid;
+}
+
+/* SLIDER */
+
+/* Slider codigo base */
+.rslides {
+    /* border: 2px red solid; */
+    list-style: none;
+    overflow: hidden;
+    margin: auto;
+    padding: 0;
+}
+
+.rslides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.rslides img {
+    display: block;
+    height: auto;
+    min-height: 400px;
+    float: left;
+    width: 100%;
+    border: 0;
+    object-fit: cover;
+}
+
+/* Slider */
+
+.cont_slider {
+    /* border: 2px red solid; */
+    position: relative;
+}
+
+/* Div para limitar el ancho de la info */
+.cont_slider_info {
+    /* border: 2px green solid; */
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transform: translate(50%, 0%);
+    right: 50%;
+    top: 0%;
+    z-index: 11;
+    height: 100%;
+    gap: 20px;
+}
+
+/* Contenedor para la info */
+.cont_slider_text {
+    /* border: 2px red solid; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    width: 400px;
+    gap: 30px;
+}
+
+.cont_slider_text h1 {
+    font-size: 2.2em;
+}
+
+.cont_slider_text p {
+    color: var(--gris);
+}
+
+/* Boton naranja (read) */
+.cont_slider_text a {
+    clip-path: polygon(0% 0%, 75% 0%, 90% 50%, 75% 100%, 0% 100%);
+    background-color: var(--naranja);
+    color: var(--blanco);
+    text-decoration: none;
+    text-align: left;
+    padding: 15px ;
+    width: 40%;
+    transition: all .3s ease;
+}
+
+.cont_slider_text a:hover {
+    background-color: var(--gris_oscuro);
+    color: var(--blanco);
+}
+
+
+/* Filtro con polygon */
+.filtro {
+    /* border: 2px red solid; */
+    background-image: url(../imagenes/dark_pattern.png);
+    clip-path: polygon(30% 0, 100% 0%, 100% 100%, 0% 100%);
+    opacity: 80%;
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    top: 0%;
+    right: 0%;
+    z-index: 10;
+}
+
+/* Botones de slider (izq - der)*/
+.prev {
+    background-color: var(--blanco);
+    color: var(--negro);
+    text-decoration: none;
+    position: absolute;
+    font-size: 3em;
+    transition: all .3s ease;
+    transform: translate(0%, -50%);
+    top: 50%;
+    left: 0%;
+    z-index: 11;
+    padding: 10px;
+    padding-left: 0px;
+}
+
+.prev:hover {
+    color: var(--naranja);
+}
+
+.next {
+    background-color: var(--blanco);
+    color: var(--negro);
+    text-decoration: none;
+    position: absolute;
+    font-size: 3em;
+    transition: all .3s ease;
+    transform: translate(0%, -50%);
+    top: 50%;
+    right: 0%;
+    z-index: 11;
+    padding: 10px;
+    padding-right: 0px;
+}
+
+.next:hover {
+    color: var(--naranja);
+}
+
+/* PRODUCTS */
+
+.titulo_prodcuts {
+    /* border: 2px red solid; */
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 2em;
+}
+
+/* Grid */
+.cont_products {
+    /* border: 2px red solid; */
+    display: grid;
+    grid-template-areas: "a b c" "d e f";
+    margin-top: 50px;
+    row-gap: 30px;
+    column-gap: 30px;
+    padding: 10px;
+}
+
+/* Organizacion del grid */
+.prod_fig1 {
+    grid-area: a;
+}
+
+.prod_fig2 {
+    grid-area: b;
+}
+
+.prod_fig3 {
+    grid-area: c;
+}
+
+.prod_fig4 {
+    grid-area: d;
+}
+
+.prod_fig5 {
+    grid-area: e;
+}
+
+.prod_fig6 {
+    grid-area: f;
+}
+
+/* Titulos de productos */
+
+.cont_prod {
+    /* border: 2px blue solid; */
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Animacion de hover en producto */
+.cont_prod:hover {
+    #anim_titulo {
+        right: -4%;
+    }
+}
+
+.a_prod {
+    text-decoration: none;
+    display: flex;
+}
+
+/* Contenedor de titulo */
+.cont_prod_titulo {
+    /* border: 2px red solid; */
+    background-color: var(--naranja);
+    display: flex;
+    position: absolute;
+    position: relative;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    left: 0;
+}
+
+/* Contenedor oscuro con titulo*/
+.prod_titulo_dark {
+    color: var(--blanco);
+    background-image: url(../imagenes/dark_pattern.png);
+    clip-path: polygon(0% 0%, 75% 0%, 85% 50%, 75% 100%, 0% 100%);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 1em;
+    height: 100%;
+    width: 100%;
+}
+
+.prod_titulo_dark h2 {
+    /* border: 2px blue solid; */
+    width: 80%;
+}
+
+/* Contenedor claro */
+.prod_titulo_light {
+    background-image: url(../imagenes/light_pattern.jpg);
+    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 43% 50%, 0% 0%);
+    transition: all .3s ease-out;
+    position: absolute;
+    height: 100%;
+    width: 23%;
+    top: 0;
+    right: 0%;
+}
+
+/* Foto product */
+.cont_products figure {
+    display: none;
+}
+
+.cont_products figure img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.display_flex {
+    display: flex;
+}
+
+/* ABOUT */
+
+.cont_carousel_padre {
+    background-image: url(../imagenes/dark_pattern.png);
+    margin-top: 50px;
+}
+
+/* Titulo */
+.about_titulo {
+    color: white;
+    font-size: 2.5em;
+    margin-block: 40px;
+    padding-left: 10px;
+}
+
+/* Contenedor de info y carrousel*/
+.cont_about {
+    /* border: 2px red solid; */
+    display: flex;
+}
+
+/* Info izq */
+.about_info {
+    /* border: 2px blue solid; */
+    color: var(--gris);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    width: 50%;
+}
+
+.about_info p {
+    margin-right: 50px;
+}
+
+
+/* Foto about */
+.fig_about {
+    /* border: 2px orange solid; */
+    display: flex;
+    width: 70%;
+}
+
+.fig_about img {
+    object-fit: cover;
+    width: 100%;
+}
+
+#slide-container {
+    border: 0;
+    padding: 0;
+    gap: 0;
+    position: relative;
+    width: 50%;
+}
+
+/* Contenedor persona */
+.slide {
+    /* border: 2px green solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    height: 450px;
+}
+
+.slide p {
+    color: var(--gris);
+    margin-inline: 50px;
+}
+
+/* Fig foto */
+.fig_slide {
+    /* border: 2px purple solid; */
+    display: flex;
+    width: 300px;
+}
+
+.fig_slide img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Flechas */
+
+.cont_flechas {
+    /* border: 2px red solid; */
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    gap: 10px;
+    width:50%;
+    top: 70%;
+    right: 0%;
+}
+
+.arrow {
+    display: block;
+    border: 0;
+    background-color: var(--naranja);
+    transition: all .3s ease;
+    color: white;
+    text-align: center;
+    width: 40px;
+    padding: 10px;
+}
+
+.arrow:hover {
+    background-color: var(--gris_oscuro);
+}
+
+/* PARALLAX */
+
+.parrallax {
+    /* border: 2px green solid; */
+    background-image: url(../imagenes/parallax.jpg);
+    color: white;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    background-attachment: fixed;
+    margin-top: 100px;
+    height: 500px;
+    display: flex;
+    position: relative;
+    z-index: -1;
+}
+
+/* Contenedor de info */
+.cont_parallax_info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 20px;
+}
+
+/* Titulo */
+.cont_parallax_info h2 {
+    max-width: 300px;
+    font-size: 2.3em;
+}
+
+/* Boton */
+.cont_parallax_info a {
+    clip-path: polygon(0% 0%, 75% 0%, 90% 50%, 75% 100%, 0% 100%);
+    background-color: var(--gris_oscuro);
+    color: var(--blanco);
+    text-decoration: none;
+    margin-top: 30px;
+    text-align: left;
+    padding: 15px ;
+    width: 20%;
+    transition: all .3s ease;
+}
+
+.cont_parallax_info a:hover {
+    background-color: var(--naranja);
+}
+
+/* Filtro */
+.filtro_parallax {
+    background-color: #f47e00a7;
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* SERVICES */
+
+/* Titulo */
+.titulo_services {
+    color: var(--blanco);
+    padding-bottom: 30px;
+    padding-top: 80px;
+    font-size: 2em;
+}
+
+.titulo_services h2 {
+    padding-left: 10px;
+}
+
+/* Contenedor con fondo */
+.cont_services_padre {
+    background-image: url(../imagenes/dark_pattern.png);
+}
+
+/* Contenedor con ancho de 1200px */
+.cont_services {
+    /* border: 2px red solid; */
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+/* Contenedor para servicios */
+.cont_service {
+    /* border: 2px green solid; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 270px;
+    margin-bottom: 50px;
+}
+
+.cont_service p {
+    color: var(--gris);
+}
+
+/* Contenedor con read more */
+.cont_service_read {
+    display: flex;
+    gap: 10px;
+    font-size: 1.4em;
+}
+
+.cont_service_read a {
+    color: var(--blanco);
+}
+
+.cont_service_read i {
+    /* border: 2px blue solid; */
+    padding-top: 8px;
+    color: var(--naranja);
+}
+
+/* Figure de foto*/
+.fig_service {
+    transition: all .5s ease;
+    display: flex;
+}
+
+.fig_service img {
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Animacion hover de foto de servicio */
+.fig_service:hover {
+    scale: 105%;
+    box-shadow: 0px 0px 10px 1px var(--naranja);
+}
+
+/* VIDEO */
+
+.cont_video_padre {
+    margin-top: 50px;
+}
+
+.cont_video_padre h2 {
+    font-size: 3em;
+    margin-block: 40px;
+    padding: 10px;
+}
+
+.cont_video  {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.video {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+/* FOOTER */
+
+footer {
+    background-image: url(../imagenes/dark_pattern.png);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+    height: 40px;
+}
+
+footer p {
+    color: var(--blanco);
+    margin-left: 10%;
+}
+
+

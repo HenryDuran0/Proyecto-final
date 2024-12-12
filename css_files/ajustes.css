@@ -1,0 +1,57 @@
+/* SLIDER */
+@media screen and (max-width:1300px) and (min-width:769px){
+    .cont_slider_text {
+        padding-right: 70px;
+    }
+}
+
+@media screen and (max-width:940px){
+    /* Texto de slider */
+    .cont_slider_text h1 {
+        width: 80%;
+    }
+
+    .cont_slider_text p {
+        width: 90%;
+    }
+
+    /* Modal */
+    .modal {
+        width: 90%;
+    }
+}
+
+/* MODAL */
+@media screen and (max-width:580px){
+    .modal {
+        height: 60vh;
+    }
+
+    .info_modal {
+        display: none;
+    }
+
+    /* Form */
+    .form_modal {
+        width: 100%;
+    }
+
+    .form_modal_inputs {
+        flex-direction: column;
+        height: fit-content;
+        gap: 10px;
+    }
+
+    .form_modal_inputs input {
+        width: 100%;
+    }
+
+    /* Text area */
+    .form_modal textarea {
+        margin-top: 10px;
+    }
+
+    .form_modal a {
+        margin-top: 10px;
+    }
+}

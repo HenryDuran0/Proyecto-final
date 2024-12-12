@@ -1,0 +1,207 @@
+/* Colores */
+:root {
+    --negro: #000;
+    --blanco: #fff;
+    --gris: #858585;
+    --naranja: #f47e00;
+}
+
+/* Media query pera solucionar problema de productos */
+@media screen and (max-width:768px) and (min-width:480px){
+    /* PRODUCTS */
+
+    .cont_products {
+        grid-template-areas: "a b" "c d" "e f" ;
+    }
+}
+
+@media screen and (max-width:768px) {
+    /* HEADER */
+
+    /* Info de menu de contacto oculta */
+    .head_cont_info {
+        display: none;
+    }
+
+    /* Menu blanco de opciones oculto */
+    .fig_logo {
+        display: none;
+    }
+
+    .cont_menu {
+        display: none;
+    }
+
+    .head_cont_nav {
+        height: 0;
+    }
+
+    /* Contenedor principal */
+    .head_ancho {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .head_ancho a {
+        color: white;
+        display: block;
+        padding: 15px;
+        font-size: 2em;
+    }
+
+    /* Btn de menu de opciones y logo */
+    .cont_btn_menu {
+        display: flex;
+    }
+
+    .cont_btn_menu figure {
+        display: flex;
+    }
+
+    .cont_btn_menu figure img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    /* Menu de opciones modificado */
+
+    .cont_menu {
+        background-image: url(../imagenes/dark_pattern.png);
+        flex-direction: column;
+        position: absolute;
+        width: 250px;
+        height: fit-content;
+        top: 7%;
+        left: 0%;
+        z-index: 12;
+    }
+
+    .cont_menu li {
+        justify-content: center;
+        height: auto;
+    }
+
+    .cont_menu li a {
+        color: white;
+        font-weight: lighter;
+    }
+
+    /* Menu de contacto modificado */
+    .head_cont_info {
+        background-image: url(../imagenes/dark_pattern.png);
+        position: absolute;
+        flex-direction: column;
+        z-index: 12;
+        padding: 10px;
+        width: 270px;
+        top: 100%;
+        right: 0;
+    }
+
+    .head_cont_email {
+        margin-bottom: 10px;
+    }
+
+    .head_cont_contact {
+        padding-left: 10px;
+    }
+
+    .head_cont_contact p:nth-child(1) {
+        display: none;
+    }
+
+    .rotar {
+        transform: rotate(180deg)
+    }
+
+    /* SLIDER */
+
+    /* Contenedor de texto */
+    .cont_slider_text {
+        text-align: center;
+        align-items: center;
+        padding-right: 0;
+        width: 85%;
+        margin: auto;
+    }
+
+    .cont_slider_text h1 {
+        width: 100%;
+    }
+
+    .cont_slider_text p {
+        color: white;
+        width: 100%;
+    }
+
+    .cont_slider_text a {
+        width: 150px;
+    }
+
+    /* filtro */
+    .filtro {
+        background-image: none;
+        background-color: #00000080;
+        clip-path: none;
+        width: 100%;
+    }
+
+    /* PARALLAX */
+
+    /* Contenedor de info */
+    .cont_parallax_info {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    /* Titulo */
+    .cont_parallax_info h2 {
+        max-width: 80%;
+    }
+
+    /* Boton */
+    .cont_parallax_info a {
+        width: 25%;
+    }
+
+    .filtro_parallax {
+        background-color: #00000050;
+        clip-path: none;
+        width: 100%;
+    }
+
+    /* ABOUT */
+    .cont_about {
+        flex-direction: column;
+    }
+
+    /* Contenedor de info y carousel */
+    .about_info {
+        align-items: center;
+    }
+
+    .about_info p {
+        margin-right: 0;
+    }
+
+    /* Contenedor de info */
+    .about_info {
+        width: 100%;
+    }
+
+    /* Contenedor carousel */
+    #slide-container {
+        width: 100%;
+    }
+
+    /* Contenedor flechas */
+    .cont_flechas {
+        width:100%;
+        top: 80%;
+        right: 0%;
+    }
+}
