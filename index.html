@@ -434,19 +434,19 @@
         //FUNCION PARA VALIDAR CAMPOS OBLIGATORIOS
         function valida_enviar() {
             if(document.form.form_name.value.length == 0) {
-                alert("Campo obligatorio vacio (Nombre)")
+                alert("Required field empty (Name)")
                 document.formulario.nombre.focus()
                 return 0;
             }
 
             if(document.form.form_mail.value.length == 0) {
-                alert("Campo obligatorio vacio (Primer apellido)")
+                alert("Required field empty (E-mail)")
                 document.formulario.nombre.focus()
                 return 0;
             }
 
             if(document.form.form_text.value.length == 0) {
-                alert("Campo obligatorio vacio (Correo electrónico)")
+                alert("Required field empty (Comment)")
                 document.formulario.nombre.focus()
                 return 0;
             }
